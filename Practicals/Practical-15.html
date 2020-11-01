@@ -10,7 +10,6 @@
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20pt;
-            font-weight: normal;
             background: antiquewhite; 
         }
         .main{
@@ -22,14 +21,12 @@
             margin: 0px 30px 0px 30px;
             background: transparent;
             text-shadow: 1px 1px 1px #202020;
-            font-family: Arial, Helvetica, sans-serif;
             font-size: 18pt;
             border: 1px solid lightblue;
             color: lightblue;
         }
         #clickme{
             padding: 20px;
-            font-family: Arial, Helvetica, sans-serif;
             font-size: 18pt;
             background: lightblue; 
         }
@@ -48,26 +45,28 @@
             var button2 = document.getElementById("plus");
             var count = 0;
 
-            button1.onclick = function () {
-                count = count - 1;
+            updateCount();
+            function updateCount() {
                 button.innerHTML = count;
-                if (count==0 || count<0) {
-                    button1.disabled = true;
+                if (count <= 0) button1.style.color = "grey";
+                else button1.style.color = "black";
+            }
+
+            button2.addEventListener("click", () => {
+                count++;
+                updateCount();
+            });
+
+            button1.addEventListener("click", () => {
+                if(count <= 0) {
+                    button1.disable = true;
+                } 
+                else {
+                    count--;
+                    button1.disable = false;
                 }
-                else{
-                    button1.disabled=false;
-                }
-            };
-            button2.onclick = function () {
-                count += 1;
-                button.innerHTML = count;
-                if (count==0 || count<0) {
-                    button1.disabled = true;
-                }
-                else{
-                    button1.disabled=false;
-                }
-            };
+                updateCount();
+            });
         </script>
 </body>
 </html>
