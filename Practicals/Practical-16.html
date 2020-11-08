@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Practical-16</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: lightskyblue;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+        }
+        h1,form{
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-size: 50px;
+            color: purple;
+        }
+        form input,form button{
+            padding: 10px;
+            border: none;
+            font-size: 24px;
+            background: white;
+            outline: none;
+        }
+        form button{
+            color: blue;
+            background-color: white;
+            cursor: pointer;
+        }
+        form button:hover{
+            color: white;
+            background-color: skyblue;
+        }
+
+        /* new listcontainer*/
+
+        .todo-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .todo-list{
+            width: 25%;
+            list-style: none;
+        }
+        .todo{
+            margin: 8px;
+            background-color: white;
+            color: black;
+            font-size: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .todo-item{
+            flex: 1;
+            margin: 0 8px;
+        }
+        .check-btn,.delete-btn{
+            background-color: green;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .delete-btn{
+            background-color: red;
+        }
+        .fa-check,.fa-trash{
+            pointer-events: none;
+        }
+        .completed{
+            text-decoration: line-through;
+            opacity: .5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fullstack To-do List</h1>
+    <form>
+        <input type="text" class="todo-input" />
+        <button class="todo-button">
+            <i class = "fa fa-plus-square" aria-hidden="true"></i>
+        </button>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list">
+           
+        </ul>
+    </div>
+    <script src="../JavaScript/Practical-16.js"></script>
+</body>
+</html>
