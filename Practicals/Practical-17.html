@@ -1,43 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <title>Practical-17</title>
     <style>
         *{
-            padding: 0;
             margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
         body{
-            font-family: 'Quicksand', sans-serif;
+            font-family: Quicksand, sans-serif;
             display: flex;
-            justify-content: center;
             align-items: center;
-            flex-direction: column;
-            color: black;
+            justify-content: center;
             height: 100vh;
+            width: 100%;
+            text-align: center;
+            flex-direction: column;
+            background-position: center;
+            background-size: cover;
+            color: white;
         }
         #time{
             font-size: 8rem;
         }
-        h1{
-            margin-bottom: 16px;
-        }
         h2{
+            margin-top: 1rem;
             font-size: 3rem;
             opacity: 0.5;
+        }
+        h3{
+            margin-top: 1rem;
+            font-size: 2rem;
         }
     </style>
 </head>
 <body>
     <time id="time"></time>
     <h1 id="greeting"></h1>
-    <h2 contenteditable="true" id="name"></h2>
-    <h3 id="date"></h3>
-    <script src="../JavaScript/Practical-17.js"></script>
+    <h2 id="name" contenteditable="true"></h2>
+    <h3 id="date">fdf</h3>
+    <script src="script17.js"></script>
 </body>
 </html>
