@@ -34,13 +34,13 @@ function setGreeting() {
         document.body.style.backgroundImage = 'url("../Image/morning.jpg")';
         greeting.innerHTML = "Good Morning";
     } 
-    else if (hour > 12) {
-        document.body.style.backgroundImage = 'url("../Image/evening.jpg")';
-        greeting.innerHTML = "Good Evening";
-    } 
-    else {
+    else if (hour < 18) {
         document.body.style.backgroundImage = 'url("../Image/afternoon.jpg")';
         greeting.innerHTML = "Good Afternoon";
+    } 
+    else {
+        document.body.style.backgroundImage = 'url("../Image/evening.jpg")';
+        greeting.innerHTML = "Good Evening";
     }
 }
 
