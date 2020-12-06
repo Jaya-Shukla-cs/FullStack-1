@@ -1,31 +1,30 @@
-//selector
-const form1 = document.getElementById('form-1');
-const form2 = document.getElementById('form-2');
-const form3 = document.getElementById('form-3');
-const next1 = document.getElementById('next-1');
-const next2 = document.getElementById('next-2');
-const back1 = document.getElementById('back-1');
-const back2 = document.getElementById('back-2');
-const progress = document.getElementById('progress');
+var btn1 = document.getElementById('btn-1');
+var nextbtn2 = document.getElementById('next-btn-2');
+var backbtn2 = document.getElementById('back-btn-2');
+var nextbtn3 = document.getElementById('next-btn-3');
+var backbtn3 = document.getElementById('back-btn-3');
+var form1 = document.getElementById('form-1');
+var form2 = document.getElementById('form-2');
+var form3 = document.getElementById('form-3');
+var progress = document.getElementById('progress');
 
-//event handler
-next1.onclick = function () {
-    form1.style.left = "-450px"
-    form2.style.left = "40px"
-    progress.style.width = "240px";
-}
-back1.onclick = function () {
-    form1.style.left = "40px"
-    form2.style.left = "450px"
-    progress.style.width = "120px";
-}
-next2.onclick = function () {
-    form2.style.left = "-450px"
-    form3.style.left = "40px"
-    progress.style.width = "360px";
-}
-back2.onclick = function () {
-    form2.style.left = "40px"
-    form3.style.left = "450px"
-    progress.style.width = "240px";
-}
+btn1.onclick=()=>{
+    form1.style.left = '450px';
+    form2.style.left = '0px';
+    progress.style.width = '240px';
+};
+nextbtn2.onclick=()=>{
+    form2.style.left = '450px';
+    form3.style.left = '0px';
+    progress.style.width = '360px';
+};
+backbtn2.onclick = ()=>{
+    form2.style.left = '450px';
+    form1.style.left = '0px';
+    progress.style.width = '120px';
+};
+backbtn3.onclick = ()=>{
+    form2.style.left = '0px';
+    form3.style.left = '450px';
+    progress.style.width = '240px';
+};

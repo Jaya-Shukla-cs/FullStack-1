@@ -1,145 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practical-19</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <style>
         * {
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
             box-sizing: border-box;
         }
         body {
-            background: grey;
-            font-family: 'Open Sans', sans-serif;
+            background-color: grey;
             height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
         }
         .container {
-            background: white;
             width: 360px;
-            height: 400px;
-            position: relative;
+            background: white;
+            height: 60vh;
+            border-radius: 10px;
+            position: absolute;
             overflow: hidden;
         }
-        .container form {
-            width: 280px;
-            position: absolute;
-            left: 40px;
-            top: 80px;
-            transition: 0.5s;
-        }
-        form h3 {
-            text-align: center;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-        }
-        form input {
-            width: 100%;
-            padding: 10px 5px;
-            margin: 5px 0px;
-            border: none;
-            outline: none;
-            border-bottom: 1px solid black;
-            background: transparent;
-        }
-        .btn-box {
-            margin: 30px auto;
-            text-align: center;
-        }
-        form button {
-            width: 120px;
-            height: 35px;
-            background-color: crimson;
-            color: white;
-            outline: none;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-        #form-2 {
-            left: 450px;
-        }
-        #form-3 {
-            left: 450px;
-        }
-        .step-row {
-            width: 100%;
+        .p-row {
+            width: 360px;
             height: 40px;
             box-shadow: 0px -1px 5px -1px black;
             display: flex;
-            align-items: center;
             position: relative;
+            align-items: center;
         }
-        .step-col {
+        .p-col {
             width: 120px;
             text-align: center;
             z-index: 1;
-        }
+            font-weight: bolder;
+        } 
         #progress {
             width: 120px;
             height: 100%;
             position: absolute;
-            background-color: crimson;
-            transition: 0.3s;
-        }
+            background-color: rgb(243, 12, 24);
+            transition: 0.4s;
+        }       
         #progress::after {
-            content: '';
+            content: "";
             width: 0px;
             height: 0px;
             position: absolute;
             border-top: 20px solid transparent;
             border-bottom: 20px solid transparent;
             right: -20px;
-            border-left: 20px solid crimson;
+            top: 0px;
+            border-left: 20px solid rgb(243, 15, 15);
+        } 
+        #form-1 {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            left: 0px;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+        h1 {
+            margin-top: 20px;
+            margin: 10px;
+            color: grey;
+            font-size: 30px;
+        }
+        .btn {
+            height: 30px;
+            width: 100px;
+            margin: 10px;
+            background-color: rgb(235, 22, 40);
+            color: white;
+            outline: none;
+            border: none;
+        }
+        .btn-box {
+            display: flex;
+            margin: 0px;
+        }
+        #form-1 input {
+            width: 60%;
+            height: 40px;
+            margin: 12px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+        }
+        #form-2 {
+            position: absolute;
+            left: 450px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+        #form-2 input {
+            width: 60%;
+            height: 40px;
+            margin: 12px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+        }
+        #form-3 {
+            position: absolute;
+            left: 450px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+        #form-3 input {
+            width: 60%;
+            height: 40px;
+            margin: 12px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <form id="form-1">
-            <h3>Create Account</h3>
-            <input type="email" name="" id="" placeholder="Enter Email">
-            <input type="password" name="" id="" placeholder="Enter Password">
-            <input type="password" name="" id="" placeholder="Confirm Password">
-            <div class="btn-box">
-                <button type="button" id="next-1">Next</button>
-            </div>
-        </form>
-    
-        <form id="form-2">
-            <h3>Social Links</h3>
-            <input type="text" name="" placeholder="Hackerrank">
-            <input type="text" name="" placeholder="GitHub">
-            <input type="text" name="" placeholder="Confirm Password">
-            <div class="btn-box">
-                <button type="button" id="back-1">Back</button>
-                <button type="button" id="next-2">Next</button>
-            </div>
-        </form>
-    
-        <form id="form-3">
-            <h3>Personal Information</h3>
-            <input type="text" name="" placeholder="First Name">
-            <input type="text" name="" placeholder="Last Name">
-            <input type="tel" name="" placeholder="Mobile Number">
-            <div class="btn-box">
-                <button type="button" id="back-2">Back</button>
-                <button type="button">Submit</button>
-            </div>
-        </form>
-    
-        <div class="step-row">
-            <div id="progress"></div>
-            <div class="step-col"><small>Step-1</small></div>
-            <div class="step-col"><small>Step-2</small></div>
-            <div class="step-col"><small>Step-3</small></div>
+      <div class="p-row">
+        <div id="progress"></div>
+        <div class="p-col">Step-1</div>
+        <div class="p-col">Step-2</div>
+        <div class="p-col">Step-3</div>
+      </div>
+      <div id="form-1">
+        <h1>Create Account</h1>
+        <input type="text" id="username" placeholder="Username" />
+        <input type="text" id="username" placeholder="Password" />
+        <input type="text" id="username" placeholder="Confirm Password" />
+        <button class="btn" id="btn-1">Next</button>
+      </div>
+      <div id="form-2">
+        <h1>Enter Social Links</h1>
+        <input type="text" id="username" placeholder="Linkedin" />
+        <input type="text" id="username" placeholder="Gmail" />
+        <input type="text" id="username" placeholder="Facebook" />
+        <div class="btn-box">
+          <button class="btn" id="next-btn-2">Next</button>
+          <button class="btn" id="back-btn-2">Back</button>
         </div>
+      </div>
+      <div id="form-3">
+        <h1>Enter OTP</h1>
+        <input type="text" id="username" placeholder="OTP" />
+        <input type="text" id="username" placeholder="Confirm OTP" />
+        <input type="text" id="username" placeholder="Enter Code" />
+        <div class="btn-box">
+          <button class="btn" id="next-btn-3">Next</button>
+          <button class="btn" id="back-btn-3">Back</button>
+        </div>
+      </div>
     </div>
-    <script src="script19.js"></script>
-</body>
+    <script src="../JavaScript/Practical-19.js"></script>
+</body>  
 </html>
